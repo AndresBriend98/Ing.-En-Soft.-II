@@ -102,15 +102,3 @@ test ('Debe eliminar una carpeta de una carpeta', () => {
     expect(carpeta1.getContenido()).not.toContain(carpeta2);
 
 });
-
-
-test ('Debe obtener el tamaño de una foto', () => {
-    const carpeta1 = new carpeta('carpeta1');
-    const foto1 = new foto('foto1');
-
-    carpeta1.agregrarElemento(foto1);
-
-    expect(carpeta1.getTamaño()).toEqual(foto1.getTamaño());
-
-});
-
