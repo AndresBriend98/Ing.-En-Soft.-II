@@ -1,15 +1,18 @@
-export
+export // Permite que la clase sea importada en otros archivos
 
+// Clase elementoBase que contiene los atributos y métodos comunes a las clases carpeta, video, foto y archivo
 abstract class elementoBase{
 
     nombre: string;
-    tamaño: number;
+    tamanio: number;
 
+    // Constructor de la clase elementoBase
     constructor(nombre: string){
         this.nombre = nombre;
-        this.tamaño = this.ObtenerTamaño();
+        this.tamanio = this.obtenerTamanio();
     }
 
+    // Métodos get y set de los atributos nombre y tamaño
     getNombre() : string{
         return this.nombre;
     }
@@ -17,14 +20,17 @@ abstract class elementoBase{
         this.nombre = nombre;
     }
 
-    getTamaño() : number{
-        return this.tamaño;
-    }
-    setTamaño(tamaño: number){
-        this.tamaño = tamaño;
+    getTamanio() : number{
+        return this.tamanio;
     }
 
-    ObtenerTamaño() : number{
+    setTamanio(tamanio: number){
+        this.tamanio = tamanio;
+    }
+
+    // Método abstracto que devuelve el tamaño del elemento
+    obtenerTamanio() : number{
         return this.nombre.length;
     }
+    
 }
