@@ -9,11 +9,7 @@ class archivo extends elementoBase{
     // Constructor de la clase archivo
     constructor(nombre: string){
         super(nombre);
-    }
-    
-    // Método que devuelve el tamaño del archivo
-    obtenerTamanio() : number{
-        return this.nombre.length;
-    }
         
+    }
+  
 }

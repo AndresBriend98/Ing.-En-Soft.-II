@@ -166,3 +166,15 @@ test ('Debe obtener el tamaño de una foto dentro de una carpeta', () => {
 });
 
 /*---------------------------------------------------------------------*/
+//Obtener el id de un elemento dentro de una carpeta
+test ('Debe  obtener el id de un elemento', () => {
+    let carpetaPrueba = new carpeta('capetaFotos');
+    let fotoAleatoria = new foto("vacaciones de febrero")
+    fotoAleatoria.setTamanio(10);
+    carpetaPrueba.agregrarElemento(fotoAleatoria);
+
+
+    expect(carpetaPrueba.obtenerElementoPorid(fotoAleatoria.getId())).toBe(fotoAleatoria);
+});
+
+/*---------------------------------------------------------------------*/

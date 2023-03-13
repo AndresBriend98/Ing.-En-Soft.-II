@@ -9,11 +9,7 @@ class foto extends elementoBase{
     // Constructor de la clase foto
     constructor(nombre: string){
         super(nombre);
-    }
     
-    // Método que devuelve el tamaño de la foto
-    obtenerTamanio() : number{
-        return this.nombre.length;
     }
-    
+
 }

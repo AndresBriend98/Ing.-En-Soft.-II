@@ -12,7 +12,7 @@ class carpeta extends elementoBase{
     // Constructor de la clase carpeta
     constructor(nombre: string){
         super(nombre);
-        this.contenido = new Array<elementoBase>();
+        this.contenido = [];
     }
     
     // Método que agrega un elemento a la carpeta
@@ -29,4 +29,9 @@ class carpeta extends elementoBase{
     getContenido() : elementoBase[]{
         return this.contenido;
     }
+
+    // Método que devuelve la cantidad de elementos que hay dentro de la carpeta
+    obtenerElementoPorid(id: string): elementoBase | undefined {
+        return this.contenido.find(contenido => contenido.getId() === id);
+      }
 }
