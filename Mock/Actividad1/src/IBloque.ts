@@ -1,12 +1,9 @@
-import { sha256 } from 'crypto-hash';
-import { sinon } from 'sinon';
-import crypto from 'crypto';
 
 export interface IBloque {
-    Index: Number;
-    Hash: String;
-    HashAnterior: String | any;
+    index: Number;
+    hash: String;
+    hashAnterior: String | any;
     nonce: String;
     transacciones: String;
-    Timestamp: Date;
+    timestamp: Date;
   }
